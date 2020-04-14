@@ -15,6 +15,7 @@ const ArrowContainer: React.StatelessComponent<ArrowContainerProps> = ({
         <div
             onClick={function(e){e.stopPropagation();}}
             style={{
+                pointerEvents: 'none',
                 paddingLeft: position === 'right' ? arrowSize : 0,
                 paddingTop: position === 'bottom' ? arrowSize : 0,
                 paddingBottom: position === 'top' ? arrowSize : 0,
@@ -25,6 +26,7 @@ const ArrowContainer: React.StatelessComponent<ArrowContainerProps> = ({
             <div
                 onClick={function(e){e.stopPropagation();}}
                 style={{
+                    pointerEvents: 'none',
                     position: 'absolute',
                     ...((): React.CSSProperties => {
                         const arrowWidth = arrowSize * 2;

@@ -316,7 +316,7 @@ class Popover extends React.Component<PopoverProps, PopoverState> {
         container.style.position = 'absolute';
         container.style.top = '0';
         container.style.left = '0';
-
+        container.style.pointerEvents = 'none';
         return container;
     }
 

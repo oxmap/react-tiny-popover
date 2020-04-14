@@ -285,6 +285,7 @@ var Popover = /** @class */ (function (_super) {
         container.style.position = 'absolute';
         container.style.top = '0';
         container.style.left = '0';
+        container.style.pointerEvents = 'none';
         return container;
     };
     Popover.prototype.getLocationForPosition = function (position, newTargetRect, popoverRect) {
