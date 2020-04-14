@@ -42,8 +42,8 @@ var Popover = /** @class */ (function (_super) {
             _this.renderPopover();
         };
         _this.onClick = function (e) {
-            var _a = _this.props, onClickOutside = _a.onClickOutside, isOpen = _a.isOpen;
-            if (_this.stopPropagation)
+            var _a = _this.props, onClickOutside = _a.onClickOutside, isOpen = _a.isOpen, stopPropagation = _a.stopPropagation;
+            if (stopPropagation == null || stopPropagation)
                 e.stopPropagation();
             if (!_this.willUnmount && !_this.willMount && !_this.popoverDiv.contains(e.target) && !_this.target.contains(e.target) && onClickOutside && isOpen) {
                 onClickOutside(e);

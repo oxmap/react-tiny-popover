@@ -15,8 +15,8 @@ var React = require("react");
 var util_1 = require("./util");
 var ArrowContainer = function (_a) {
     var position = _a.position, children = _a.children, style = _a.style, _b = _a.arrowColor, arrowColor = _b === void 0 ? util_1.Constants.DEFAULT_ARROW_COLOR : _b, _c = _a.arrowSize, arrowSize = _c === void 0 ? 10 : _c, arrowStyle = _a.arrowStyle, popoverRect = _a.popoverRect, targetRect = _a.targetRect;
-    return (React.createElement("div", { style: __assign({ paddingLeft: position === 'right' ? arrowSize : 0, paddingTop: position === 'bottom' ? arrowSize : 0, paddingBottom: position === 'top' ? arrowSize : 0, paddingRight: position === 'left' ? arrowSize : 0 }, style) },
-        React.createElement("div", { style: __assign(__assign({ position: 'absolute' }, (function () {
+    return (React.createElement("div", { onClick: function (e) { e.stopPropagation(); }, style: __assign({ paddingLeft: position === 'right' ? arrowSize : 0, paddingTop: position === 'bottom' ? arrowSize : 0, paddingBottom: position === 'top' ? arrowSize : 0, paddingRight: position === 'left' ? arrowSize : 0 }, style) },
+        React.createElement("div", { onClick: function (e) { e.stopPropagation(); }, style: __assign(__assign({ position: 'absolute' }, (function () {
                 var arrowWidth = arrowSize * 2;
                 var top = (targetRect.top - popoverRect.top) + (targetRect.height / 2) - (arrowWidth / 2);
                 var left = (targetRect.left - popoverRect.left) + (targetRect.width / 2) - (arrowWidth / 2);
